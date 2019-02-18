@@ -13,7 +13,7 @@ public:
   virtual ~TVector();
 
   int GetSize() const;                      // размер вектора
-  virtual T& operator[](int pos);           // доступ
+  virtual T& operator[](int pos);           // оператор индексации
   
   bool operator==(const TVector &v) const;      // сравнение
   bool operator!=(const TVector &v) const;      // сравнение
@@ -27,10 +27,10 @@ public:
   TVector operator-(const TVector &v);     // вычитание
   T operator*(const TVector &v);           // скалярное произведение
 
-  template <class ValType1>
-  friend istream& operator>>(istream &in, TVector<ValType1>& v);
-  template <class ValType1>
-  friend ostream& operator<<(ostream &out, const TVector<ValType1>& v);
+  template <class Type>
+  friend istream& operator>>(istream &in, TVector<Type>& v);
+  template <class Type>
+  friend ostream& operator<<(ostream &out, const TVector<Type>& v);
 }; 
 
 template <class T>
