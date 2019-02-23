@@ -6,9 +6,9 @@ before_script:
   - mkdir ../build
   - cd ../build
 script:
-  - cmake ../381706-1_Suslov
+  - cmake ../381706-1_Alllabs_Suslov
   - make -j
   - cd ./bin/
-  - ./381706-1_Suslov 
+  - /381706-1_Alllabs_Suslov
 notifications:
   email: false
