@@ -4,7 +4,8 @@ int main()
 {
   setlocale(LC_ALL, "Russian");
   int n;
-  cin >> n;
+  n = 5;	
+  
   try
   {
 	  TQueue<int> q(n);
