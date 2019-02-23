@@ -9,12 +9,8 @@ int main()
 		TStack<int> st(5);
 		for (int i = 0; i < 5; i++)
 		{
-			cout << i;
-			cout << " number in stack ";
-			int l;
-			cin >> l;
-			cout << endl;
-			st.Put(l);
+			
+			st.Put(i);
 		}
 		cout << endl;
 		st.PrintStack();
