@@ -6,6 +6,7 @@ TEST(Stack, throws_when_create_stack_with_negative_size)
   ASSERT_ANY_THROW(TStack <int> S(-1));
 }
 
+
 TEST(Stack, can_put_and_get)
 {
   TStack <int> S(2);
