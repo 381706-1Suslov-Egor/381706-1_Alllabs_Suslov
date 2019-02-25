@@ -13,7 +13,7 @@ int main()
     for (int i = 1; i <= k; i++)
       list.PutEnd(i);
 
-    cout << "\nСписок:\n";
+    cout << "\n\nСписок:\n";
     list.Print();
 	cout << "\n\nПервый вывод крайних элементов списка";
     cout << "\n\nElement first of the List: " << list.GetBegin();

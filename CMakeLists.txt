@@ -41,9 +41,7 @@ set(StackList StackList)
 set(StackListLib StackListLib)
 set(StackListTest StackListTest)
 
-#set(Polski Polski)
-#set(PolskiLib PolskiLib)
-#set(PolskiTest PolskiTest)
+
 
 set(Polish Polish)
 set(PolishLib PolishLib)
@@ -112,7 +110,4 @@ add_subdirectory(PolishLib)
 add_subdirectory(PolishTest)
 
 
-#include_directories(${CMAKE_CURRENT_SOURCE_DIR}/PolskiLib)
-#add_subdirectory(Polski)
-#add_subdirectory(PolskiLib)
-#add_subdirectory(PolskiTest)
+
