@@ -52,6 +52,8 @@ set(CMAKE_CONFIGURATION_TYPES "Debug;Release" CACHE STRING "Configs" FORCE) #С�
 if(NOT CMAKE_BUILD_TYPE) # проверка имеющихся у компилятора вариантов сборки
   set(CMAKE_BUILD_TYPE Release) #Если нет то устанавливаем Release
 endif()
+file(GLOB hdrs "*.h*") #Добавляем в переменную hdrs все файлы с расширением .h
+file(GLOB srcs "*.cpp") #Добавляем в переменную srcs все файлы с расширением .cpp
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/gtest)
 add_subdirectory(gtest)
