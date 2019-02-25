@@ -15,7 +15,7 @@ int main()
 
     cout << "\n\nСписок:\n";
     list.Print();
-	cout << "\n\nПервый вывод крайних элементов списка";
+	cout << "\n\n\nПервый вывод крайних элементов списка";
     cout << "\n\nElement first of the List: " << list.GetBegin();
     cout << "\nElement last of the List: " << list.GetEnd();
 	cout << "\n\nВторой вывод крайних элементов списка";
