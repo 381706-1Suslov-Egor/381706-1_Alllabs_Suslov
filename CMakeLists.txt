@@ -1,6 +1,6 @@
 ﻿cmake_minimum_required(VERSION 2.8) #Проверка версии CMake.
 
-set(PROJECT_NAME ALL_BUILD) #Создаем обычную локальную переменную с именем проекта
+set(PROJECT_NAME 381706-1_Alllabs_Suslov) #Создаем обычную локальную переменную с именем проекта
 project(${PROJECT_NAME}) # Название проекта
 
 set(MyExceptionLib MyExceptionLib)#Переменная с именем библиотеки
