@@ -152,7 +152,7 @@ TEST(ArrList, throws_when_in_empty_list_get_elem)
   ASSERT_ANY_THROW(L.Get(2));
 }
 
-/*TEST(ArrList, throws_when_in_full_list_put_elem)
+TEST(ArrList, throws_when_in_full_list_put_elem)
 {
   TArrList <int> L(3);
   L.PutEnd(1);
@@ -160,7 +160,7 @@ TEST(ArrList, throws_when_in_empty_list_get_elem)
   L.PutEnd(3);
 
   ASSERT_ANY_THROW(L.Put(2, 2));
-}*/
+}
 
 TEST(ArrList, throws_when_incurrent_index_when_list_put_elem)
 {
@@ -169,7 +169,7 @@ TEST(ArrList, throws_when_incurrent_index_when_list_put_elem)
   L.PutEnd(1);
   L.PutEnd(1);
 
-  ASSERT_ANY_THROW(L.Put(5, 5));
+  ASSERT_ANY_THROW(L.Put(3,3 ));
 }
 TEST(ArrList, can_get_elem)
 {
