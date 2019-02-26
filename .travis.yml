@@ -6,17 +6,9 @@ before_script:
   - mkdir ../build
   - cd ../build
 script:
-  - cmake ../381706-1_Alllabs_Suslov
+  - cmake ../381706-1_Suslov
   - make -j
-  - ./VectorTest/VectorTest
-  - ./MatrixTest/MatrixTest
-  - ./StackTest/StackTest
-  - ./QueueTest/QueueTest
-  - ./ListTest/ListTest
-  - ./StackListTest/StackListTest
-  - ./ArrListTest/ArrListTest
-  - ./MultiStackTest/MultiStackTest
-  - ./PolynomTest/PolynomTest
-  - ./PolishTest/PolishTest
+  - cd ./bin/
+  - ./381706-1_Suslov 
 notifications:
   email: false
