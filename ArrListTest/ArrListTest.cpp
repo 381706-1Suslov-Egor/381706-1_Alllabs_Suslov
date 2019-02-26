@@ -109,7 +109,7 @@ TEST(ArrList, throws_when_in_empty_list_get_end_elem)
   ASSERT_ANY_THROW(L.GetEnd());
 }
 
-TEST(ArrList, true_the_sequence_of_output_after_put_end_zapolneniya)
+/*TEST(ArrList, true_the_sequence_of_output_after_put_end_zapolneniya)
 {
 	TArrList <int> L(4);
 	L.PutStart(1);
@@ -120,7 +120,7 @@ TEST(ArrList, true_the_sequence_of_output_after_put_end_zapolneniya)
 	ASSERT_EQ(2, L.GetEnd());
 	ASSERT_EQ(3, L.GetEnd());
 	ASSERT_EQ(4, L.GetEnd());
-}
+}*/
 TEST(ArrList, true_the_sequence_of_output_after_put_start_zapolneniya)
 {
 	TArrList <int> L(4);
