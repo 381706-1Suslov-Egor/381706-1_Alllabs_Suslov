@@ -1,5 +1,5 @@
 #include "Polish.h"
-#include <conio.h>
+
 int  main()
 {
   try
@@ -14,7 +14,7 @@ int  main()
 	cout << "Ваш пример в обратной польской записи: ";
     B.Print();
     cout << " = " << Rez(B) << endl;
-	getch();
+	
   }
   
   catch (MyException exp)
