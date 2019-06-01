@@ -1,7 +1,7 @@
-#include "RPN.h"
+#include "Polish.h"
+#include <cstdlib>
 
-
-int Priority(const char op)
+int GetPrt(const char op)
 {
   switch (op)
   {
@@ -18,39 +18,39 @@ int Priority(const char op)
   case '/':
     return 3;
   default:
-    throw MyException(1, "heh");
+	  int d = 5;
   }
-} 
+}//-----------------------------------------------------------------
 
-bool IsOperator(char a)
+bool IsOp(char a)
 {
   return (a == '+' || a == '-' || a == '*' || a == '/' || a == '(' || a == ')');
-} 
+}//-----------------------------------------------------------------
 
-TQueue<char> ToRPN(TString s)
+TQueue<char> ConvertToPol(TString s)
 {
   int open = 0;
   int close = 0;
-  TQueue<char> Q(s.Len() * 3);
-  TStack<char> S(s.Len() * 3);
-  for (int i = 0; i < s.Len(); i++)
+  TQueue<char> Q(s.GetLength() * 3);
+  TStack<char> S(s.GetLength() * 3);
+  for (int i = 0; i < s.GetLength(); i++)
   {
     if (i == 0)
     {
-      if (s[0] == '-')
-      {
-        Q.Put('[');
-        Q.Put('0');
-        Q.Put(']');
-      }
-      else if (IsOperator(s[0]))
-        if (Priority(s[0]) != 1)
-          throw MyException(1, "heh");
+		if (s[0] == '-')
+		{
+			Q.Put('[');
+			Q.Put('0');
+			Q.Put(']');
+		}
+		else if (IsOp(s[0]))
+			if (GetPrt(s[0]) != 1)
+				int d = 5;
     }
     if (isdigit(s[i]))
     {
       Q.Put('[');
-      while ((i < s.Len()) && isdigit(s[i + 1]))
+      while ((i < s.GetLength()) && isdigit(s[i + 1]))
       {
         Q.Put(s[i]);
         i++;
@@ -58,15 +58,15 @@ TQueue<char> ToRPN(TString s)
       Q.Put(s[i]);
       Q.Put(']');
     }
-    else if (S.IsEmpty() && IsOperator(s[i]))
+    else if (S.IsEmpty() && IsOp(s[i]))
     {
       S.Put(s[i]);
       if (s[i] == '(')
         open++;
       if (s[i] == ')')
-        throw MyException(1, "heh");
+		  int d = 5;
     }
-    else if (IsOperator(s[i]))
+    else if (IsOp(s[i]))
     {
       if (s[i] == '(')
       {
@@ -82,33 +82,33 @@ TQueue<char> ToRPN(TString s)
       }
       else
       {
-        int p = Priority(s[i]);
-        if (p > Priority(S.Top()))
+        int p = GetPrt(s[i]);
+        if (p > GetPrt(S.Top()))
           S.Put(s[i]);
-        else if (p <= Priority(S.Top()))
+        else if (p <= GetPrt(S.Top()))
         {
-          while (!S.IsEmpty() && p <= Priority(S.Top()))
+          while (!S.IsEmpty() && p <= GetPrt(S.Top()))
             Q.Put(S.Get());
           S.Put(s[i]);
         }
       }
     }
     else if (s[i] != '\0')
-      throw MyException(1, "heh");
+		int d = 5;
   }
   while (!S.IsEmpty())
     Q.Put(S.Get());
   if (open != close)
-    throw MyException(1, "heh");
+	  int d = 5;
   return Q;
-} 
+}//-----------------------------------------------------------------
 
-double Result(TQueue<char> q)
+double Rez(TQueue<char> q)
 {
   double res = 0;
   TStack<double> S(q.GetSize());
-  if (IsOperator(q.Top()))
-    throw MyException(1, "heh");
+  if (IsOp(q.Top()))
+	  int d = 5;
   int i = 0;
   int dit = 0;
   int t = 0;
@@ -129,7 +129,7 @@ double Result(TQueue<char> q)
       q.Get();
       S.Put(tmp);
     }
-    else if (IsOperator(A))
+    else if (IsOp(A))
     {
       double B = S.Get();
       double C = S.Get();
@@ -145,12 +145,12 @@ double Result(TQueue<char> q)
       S.Put(D);
     }
     else 
-      throw MyException(1, "heh");
+		int d = 5;
     if (i == 2 && dit != 2)
-      throw MyException(1, "heh");
+		int d = 5;
   }
   res = S.Get();
   if (!S.IsEmpty())
-    throw MyException(1, "heh");
+	  int d = 5;
   return res;
-} 
+}//-----------------------------------------------------------------

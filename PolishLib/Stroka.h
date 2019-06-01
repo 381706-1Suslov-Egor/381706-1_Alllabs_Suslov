@@ -1,6 +1,6 @@
 #pragma once
 #include <iostream>
-#include "MyException.h"
+
 
 class TString
 {
@@ -14,7 +14,7 @@ public:
   TString(char* s);
   ~TString();
 
-  int Len();
+  int GetLength();
   void DeleteS();
 
   TString operator+(TString &A);
