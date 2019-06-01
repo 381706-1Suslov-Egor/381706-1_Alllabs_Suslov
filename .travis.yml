@@ -6,36 +6,24 @@ before_script:
   - mkdir ../build
   - cd ../build
 script:
-  - cmake ../381706-1_Kornev_AllLabs
+  - cmake ../381706-1_Alllabs_Suslov
   - make -j
-  - ./StackTest/StackTest
-  #- ./Stack/Stack
-  - ./QueueTest/QueueTest
-  #- ./Queue/Queue
   - ./VectorTest/VectorTest
-  #- ./Vector/Vector    
   - ./MatrixTest/MatrixTest
-  #- ./Matrix/Matrix   
+  - ./StackTest/StackTest
+  - ./QueueTest/QueueTest
   - ./ListTest/ListTest
-  #- ./List/List
+  - ./StackListTest/StackListTest
   - ./ArrayListTest/ArrayListTest
-  #- ./ArrayListTest/ArrayList
   - ./MultiStackTest/MultiStackTest
-  #- ./MultiStack/MultiStack
-  - ./PolinomialTest/PolinomialTest
-  #- ./PolinomialTest/Polinomial
-  - ./RPNTest/RPNTest  
-  #- ./RPNTest/RPN
-  #- ./TextTest/TextTest
+  - ./PolynomialTest/PolynomialTest
+  - ./PolishTest/PolishTest
+ #- ./TextTest/TextTest
   #- ./Text/Text
   - ./ScanTableTest/ScanTableTest
-  #- ./ScanTable/ScanTable
   - ./SortTableTest/SortTableTest
-  #- ./SortTable/SortTable
   - ./TreeTableTest/TreeTableTest
-  #- ./TreeTable/TreeTable
   - ./HashTableTest/HashTableTest
-  #- ./HashTable/HashTable
-  
+ 
 notifications:
   email: false
