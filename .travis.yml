@@ -20,6 +20,7 @@ script:
  # - ./PolishTest/PolishTest
  #- ./TextTest/TextTest
   #- ./Text/Text
+- ./PlexTest/PlexTest
   - ./ScanTableTest/ScanTableTest
   - ./SortTableTest/SortTableTest
   - ./TreeTableTest/TreeTableTest
