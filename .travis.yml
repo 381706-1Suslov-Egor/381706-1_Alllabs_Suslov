@@ -16,7 +16,7 @@ script:
   - ./StackListTest/StackListTest
   - ./ArrayListTest/ArrayListTest
   - ./MultiStackTest/MultiStackTest
-  - ./PolynomialTest/PolynomialTest
+  #- ./PolynomialTest/PolynomialTest
  # - ./PolishTest/PolishTest
  #- ./TextTest/TextTest
   #- ./Text/Text
